@@ -94,7 +94,7 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <48>;
+        steps = <24>;
         status = "disabled";
     };
 
@@ -103,7 +103,7 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <48>;
+        steps = <24>;
         status = "disabled";
     };
 
@@ -111,12 +111,21 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder_1 &encoder_2>;
         encoder_1 {
-            triggers-per-rotation = <48>;
+            // 縦スクロールの感度
+            triggers-per-rotation = <36>;
         };
         encoder_2 {
-            triggers-per-rotation = <48>;
+            // 横スクロールの感度
+            triggers-per-rotation = <36>;
         };
 
+    };
+
+    chg_stat: chg_stat {
+        compatible = "custom,chg-stat";
+        /* Adjust for your board, e.g., P0.17 for XIAO nRF52840 */
+        gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
+        status = "okay";
     };
 
     kscan_matrix: kscan_matrix {
