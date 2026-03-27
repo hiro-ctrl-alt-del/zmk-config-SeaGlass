@@ -265,7 +265,6 @@ Comming soon...\
 2. ホイールの下に滑り込ませるようにトッププレートを装着してください。
 ![lt2](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/lt2.png)
 3. 右手側と同様にクッションシールおよびゴム足貼り付けと、バッテリー・リセットスイッチの装着を行ってください。
-![lt3](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/lt3.png)
 4. 右手側と同様に斜め方向からトップカバーを装着してください。ロータリーエンコーダとホイールのはめ込みがある分右手側よりややシビアですが、信じてグッとやればズボッとハマるはずです。
 ![lt4](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/lt4.png)
 5. 右手側と同様にネジを4箇所止め、電源スイッチを装着してください。
