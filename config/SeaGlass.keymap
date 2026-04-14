@@ -25,7 +25,8 @@
 #define JP_RBRACE       PIPE              // }
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
-#define JP_HANZEN       GRAVE             // 半角/全角#define MOUSE 4
+#define JP_HANZEN       GRAVE             // 半角/全角
+#define MOUSE 4
 #define SCROLL 5
 #define NUM 6
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 120
