@@ -63,6 +63,12 @@
             bindings = <&kp DQT>;
             key-positions = <16 17>;
         };
+
+        mv_config {
+            bindings = <&sl 6>;
+            key-positions = <37 32>;
+            layers = <0>;
+        };
     };
 
     macros {
