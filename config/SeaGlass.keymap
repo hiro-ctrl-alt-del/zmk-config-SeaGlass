@@ -75,7 +75,7 @@
 
         namikakko {
             bindings = <&nami_kakko>;
-            key-positions = <23 22>;
+            key-positions = <2 3>;
             layers = <0>;
         };
 
