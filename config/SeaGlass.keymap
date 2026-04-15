@@ -58,7 +58,7 @@
         };
 
         backspace {
-            bindings = <&kp BACKSPACE>;
+            bindings = <&BackandDell>;
             key-positions = <8 9>;
         };
 
@@ -93,6 +93,11 @@
             bindings = <&sl 6>;
             key-positions = <37 32>;
             layers = <0>;
+        };
+
+        HANZEN {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 1>;
         };
     };
 
@@ -153,6 +158,15 @@
 
             tap-ms = <20>;
         };
+
+        BackandDell: BackandDell {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKANDDELL";
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -160,10 +174,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E  &kp R      &kp T                      &kp Y          &kp U            &kp I      &kp O         &kp P
-&kp A             &kp S         &kp D  &kp F      &kp G                      &kp H          &kp J            &kp K      &kp L         &kp INT_YEN
-&mt LEFT_SHIFT Z  &kp X         &kp C  &kp V      &kp B                      &kp N          &kp M            &kp COMMA  &kp PERIOD    &kp SLASH
-&mo 2             &kp LEFT_WIN  &sl 1  &kp SPACE  &mt LEFT_SHIFT LEFT_SHIFT  &kp BACKSPACE  &mt LCTRL ENTER  &mo 3      &kp LEFT_ALT  &kp ESCAPE
+&kp Q             &kp W         &kp E  &kp R      &kp T           &kp Y         &kp U            &kp I      &kp O         &kp P
+&kp A             &kp S         &kp D  &kp F      &kp G           &kp H         &kp J            &kp K      &kp L         &kp INT_YEN
+&mt LEFT_SHIFT Z  &kp X         &kp C  &kp V      &kp B           &kp N         &kp M            &kp COMMA  &kp PERIOD    &kp SLASH
+&sl 2             &kp LEFT_WIN  &sl 1  &kp SPACE  &sk LEFT_SHIFT  &BackandDell  &mt LCTRL ENTER  &mo 3      &kp LEFT_ALT  &kp ESCAPE
 &mkp MB1          &mkp MB2
             >;
 
@@ -172,30 +186,30 @@
 
         SYMBOL {
             bindings = <
-&kp EXCLAMATION  &kp JP_AT  &kp HASH  &kp DOLLAR  &kp PRCNT  &kp JP_CARET   &kp JP_AMPERSAND  &kp JP_ASTERISK  &kp MINUS          &kp JP_EQUAL
-&none            &none      &none     &none       &none      &none          &none             &none            &kp SEMI           &kp JP_COLON
-&none            &none      &none     &none       &none      &none          &none             &kp JP_TILDE     &kp JP_UNDERSCORE  &kp QUESTION
-&trans           &trans     &trans    &trans      &trans     &kp BACKSPACE  &kp ENTER         &kp DEL          &trans             &trans
+&kp EXCLAMATION  &kp JP_AT  &kp HASH  &kp DOLLAR  &kp PRCNT  &kp JP_CARET  &kp JP_AMPERSAND  &kp JP_ASTERISK  &kp MINUS          &kp JP_EQUAL
+&none            &none      &none     &none       &none      &none         &none             &none            &kp SEMI           &kp JP_COLON
+&none            &none      &none     &none       &none      &none         &none             &kp JP_TILDE     &kp JP_UNDERSCORE  &kp QUESTION
+&trans           &trans     &trans    &trans      &trans     &trans        &trans            &trans           &trans             &trans
 &mkp MB1         &mkp MB2
             >;
         };
 
         NUM {
             bindings = <
-&kp F11   &kp F12   &trans  &trans  &trans   &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp PLUS         &kp MINUS
-&kp F6    &kp F7    &kp F8  &kp F9  &kp F10  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK     &kp SLASH
-&kp F1    &kp F2    &kp F3  &kp F4  &kp F5   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE  &kp COLON
-&trans    &trans    &trans  &trans  &trans   &trans        &kp NUMBER_0  &kp PERIOD    &trans           &trans
+&kp F11   &kp F12   &trans  &trans  &trans   &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp PLUS      &kp MINUS
+&kp F6    &kp F7    &kp F8  &kp F9  &kp F10  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH
+&kp F1    &kp F2    &kp F3  &kp F4  &kp F5   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0        &kp COLON
+&trans    &trans    &trans  &trans  &trans   &trans        &trans        &trans        &trans        &trans
 &mkp MB1  &mkp MB2
             >;
         };
 
         ARROW {
             bindings = <
-&trans    &none     &none       &kp F12    &trans         &kp HOME        &kp RC(END)     &kp RC(HOME)  &kp END          &none
-&none     &kp F2    &kp F7      &kp F10    &kp LS(F5)     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&trans    &none     &none       &none      &trans         &trans          &trans          &trans        &trans           &trans
-&trans    &trans    &kp DELETE  &kp ENTER  &kp BACKSPACE  &trans          &trans          &none         &trans           &trans
+&trans    &none     &none   &kp F12  &trans      &kp HOME        &kp RC(END)     &kp RC(HOME)  &kp END          &none
+&none     &kp F2    &kp F7  &kp F10  &kp LS(F5)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&trans    &none     &none   &none    &trans      &trans          &trans          &trans        &trans           &trans
+&trans    &trans    &trans  &trans   &trans      &trans          &trans          &none         &trans           &trans
 &mkp MB1  &mkp MB2
             >;
 
