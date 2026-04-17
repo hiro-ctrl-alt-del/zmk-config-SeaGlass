@@ -172,6 +172,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mkp_back: mkp_back {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MKP_BACK";
+            bindings = <&mkp MB1>, <&mkp MB4>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mkp_next: mkp_next {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MKP_NEXT";
+            bindings = <&mkp MB2>, <&mkp MB5>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -183,7 +201,7 @@
 &kp A             &kp S         &kp D  &kp F            &kp G           &kp H         &kp J            &kp K      &kp L         &kp INT_YEN
 &mt LEFT_SHIFT Z  &kp X         &kp C  &kp V            &kp B           &kp N         &kp M            &kp COMMA  &kp PERIOD    &kp SLASH
 &sl 2             &kp LEFT_WIN  &sl 1  &mt LCTRL SPACE  &sk LEFT_SHIFT  &BackandDell  &mt LCTRL ENTER  &mo 3      &kp LEFT_ALT  &kp ESCAPE
-&mkp MB1          &mkp MB2
+&mkp_back         &mkp_next
             >;
 
             sensor-bindings = <&encoder_msc_down_up>, <&encoder_msc_left_right>;
