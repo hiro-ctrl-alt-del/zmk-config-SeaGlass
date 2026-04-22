@@ -104,6 +104,21 @@
             bindings = <&kp MINUS>;
             key-positions = <17 18>;
         };
+
+        kakkotoji {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <13 14>;
+        };
+
+        daikakkotoji {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <23 24>;
+        };
+
+        namikakkotoji {
+            bindings = <&kp PIPE>;
+            key-positions = <3 4>;
+        };
     };
 
     macros {
