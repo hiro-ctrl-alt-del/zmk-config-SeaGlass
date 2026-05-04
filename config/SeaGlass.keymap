@@ -263,7 +263,7 @@
 &kp EXCLAMATION  &kp JP_AT  &kp HASH  &kp DOLLAR  &kp PRCNT  &kp JP_CARET  &kp JP_AMPERSAND  &kp JP_ASTERISK  &kp MINUS          &kp JP_EQUAL
 &none            &none      &none     &none       &none      &none         &mkp MB4          &mkp MB5         &kp SEMI           &kp JP_COLON
 &none            &none      &none     &none       &none      &none         &none             &kp JP_TILDE     &kp JP_UNDERSCORE  &kp QUESTION
-&trans           &trans     &trans    &trans      &trans     &trans        &trans            &trans           &trans             &trans
+&trans           &trans     &trans    &trans      &trans     &trans        &trans            &trans           &trans             &kp SINGLE_QUOTE
 &mkp_back        &mkp_next
             >;
         };
